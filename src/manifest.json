@@ -6,14 +6,19 @@
         "default_popup": "./popup.html"
     },
     "content_scripts": [{
-        "all_frames": false,
+        "all_frames": true,
         "js": ["./contentScripts.js"],
         "css": ["./contentScripts.js"],
-
         "matches": ["http://*/*", "https://*/*"],
         "run_at": "document_end"
+    }, {
+        "all_frames": true,
+        "js": ["./hideAtStart.js"],
+        "css": ["./hideAtStart.js"],
+        "matches": ["http://*/*", "https://*/*"],
+        "run_at": "document_start"
     }],
-    "description": "vue-chrome-extension-boilerplate",
+    "description": "A Extension that adds darkmode along with other features to schoology",
     "icons": {
         "16": "assets/icons/icon_16.png",
         "32": "assets/icons/icon_32.png",
@@ -21,7 +26,7 @@
         "128": "assets/icons/icon_128.png"
     },
     "manifest_version": 2,
-    "name": "vue-chrome-extension-boilerplate",
+    "name": "Schoology Improvements",
     "options_ui": {
         "chrome_style": false,
         "page": "./options.html"
@@ -31,7 +36,6 @@
         "https://*/*",
         "background",
         "storage",
-        "tabs",
         "webRequest"
     ],
     "version": "1.0.0",
