@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
+    <h1>{{ h1 }}</h1>
+
   </div>
 </template>
 
@@ -8,11 +9,8 @@
 export default {
   data() {
     return {
-      msg: 'Welcome!'
+      h1: 'Schoology Dark Mode',
     }
-  }
+  },
 }
 </script>
-
-<style lang="stylus">
-</style>
